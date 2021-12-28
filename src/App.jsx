@@ -1,7 +1,9 @@
+import { Suspense } from "react";
 import "./App.css";
 
 export default function App() {
   return (
+    <Suspense fallback={<div>Loading...</div>}>
     <div className="App">
       <button className="start">Start / Restart</button>
       <div className="score"></div>
@@ -109,6 +111,7 @@ export default function App() {
         <div></div>
       </div>
     </div>
+    </Suspense>
   );
 }
 
